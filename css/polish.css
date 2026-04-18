@@ -1,0 +1,305 @@
+/* ─── Recruiter-level polish layer ────────────────────────────────────────── */
+
+/* ── Nav: Download CV button ─────────────────────────────────────────────── */
+
+.nav-cv-btn {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  border: 1px solid var(--border-hover);
+  border-radius: var(--r-full);
+  padding: 8px 20px;
+  transition: background var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast),
+              transform var(--dur-fast) var(--ease-out),
+              box-shadow var(--dur-fast);
+  white-space: nowrap;
+}
+
+.nav-cv-btn:hover {
+  background: var(--grad-primary);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(124, 109, 250, 0.35);
+}
+
+@media (max-width: 900px) {
+  .nav-cv-btn { display: none; }
+}
+
+/* ── Hero: role title ────────────────────────────────────────────────────── */
+
+.hero-role {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.hero-role.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hero: typewriter line ───────────────────────────────────────────────── */
+
+.hero-typewriter {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  min-height: 1.6em;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-typewriter.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--accent-1);
+  margin-left: 3px;
+  vertical-align: middle;
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Hero: stronger glow under title ─────────────────────────────────────── */
+
+.hero-title {
+  filter: drop-shadow(0 0 60px rgba(124, 109, 250, 0.12));
+}
+
+/* ── Hero eyebrow pulse boost ────────────────────────────────────────────── */
+
+.eyebrow-dot {
+  animation: dotPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(74, 222, 128, 0.6); }
+  50%       { box-shadow: 0 0 14px rgba(74, 222, 128, 1), 0 0 28px rgba(74, 222, 128, 0.35); }
+}
+
+/* ── Project cards: per-card glow + action links ─────────────────────────── */
+
+.project-card {
+  position: relative;
+  transition: transform var(--dur-mid) var(--ease-out),
+              box-shadow var(--dur-mid) var(--ease-out),
+              border-color var(--dur-mid) var(--ease-out);
+}
+
+.project-card[data-glow="purple"]:hover {
+  border-color: rgba(124, 109, 250, 0.55);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.55),
+              0 0 0 1px rgba(124, 109, 250, 0.25),
+              0 0 60px rgba(124, 109, 250, 0.12);
+}
+.project-card[data-glow="blue"]:hover {
+  border-color: rgba(55, 138, 221, 0.55);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.55),
+              0 0 0 1px rgba(55, 138, 221, 0.25),
+              0 0 60px rgba(55, 138, 221, 0.12);
+}
+.project-card[data-glow="amber"]:hover {
+  border-color: rgba(250, 190, 109, 0.55);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.55),
+              0 0 0 1px rgba(250, 190, 109, 0.25),
+              0 0 60px rgba(250, 190, 109, 0.12);
+}
+.project-card[data-glow="rose"]:hover {
+  border-color: rgba(250, 109, 154, 0.55);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.55),
+              0 0 0 1px rgba(250, 109, 154, 0.25),
+              0 0 60px rgba(250, 109, 154, 0.12);
+}
+.project-card[data-glow="teal"]:hover {
+  border-color: rgba(109, 250, 204, 0.55);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.55),
+              0 0 0 1px rgba(109, 250, 204, 0.25),
+              0 0 60px rgba(109, 250, 204, 0.12);
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  padding-top: 12px;
+  border-top: 0.5px solid var(--border);
+}
+
+.project-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  transition: color var(--dur-fast), transform var(--dur-fast) var(--ease-out);
+  padding: 4px 0;
+}
+
+.project-action svg {
+  flex-shrink: 0;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.project-action:hover {
+  color: var(--text-primary);
+}
+.project-action:hover svg {
+  transform: scale(1.15);
+}
+
+.project-action-demo {
+  margin-left: auto;
+  color: var(--accent-1);
+  font-weight: 500;
+}
+.project-action-demo:hover {
+  color: var(--accent-2);
+  transform: translateX(3px);
+}
+
+/* ── Achievement cards: colored shadow glow ──────────────────────────────── */
+
+.achievement-card:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4),
+              0 0 0 1px var(--card-accent, var(--border-hover)),
+              0 0 48px color-mix(in srgb, var(--card-accent, var(--accent-1)) 18%, transparent);
+}
+
+/* ── Stat cards: glassmorphism ───────────────────────────────────────────── */
+
+.stat-card {
+  background: rgba(18, 18, 31, 0.6) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(124, 109, 250, 0.18) !important;
+  transition: border-color var(--dur-mid), box-shadow var(--dur-mid), transform var(--dur-mid);
+}
+.stat-card:hover {
+  border-color: rgba(124, 109, 250, 0.45) !important;
+  box-shadow: 0 16px 48px rgba(124, 109, 250, 0.15);
+  transform: translateY(-4px);
+}
+
+/* ── Skill pills: hover accent ───────────────────────────────────────────── */
+
+.skill-pill {
+  cursor: default;
+  transition: color var(--dur-fast),
+              border-color var(--dur-fast),
+              background var(--dur-fast),
+              transform var(--dur-fast) var(--ease-out);
+}
+.skill-pill:hover {
+  color: var(--accent-1);
+  border-color: rgba(124, 109, 250, 0.5);
+  background: rgba(124, 109, 250, 0.08);
+}
+
+/* ── Timeline cards: subtle lift ────────────────────────────────────────── */
+
+.timeline-card {
+  transition: transform var(--dur-mid) var(--ease-out),
+              box-shadow var(--dur-mid) var(--ease-out),
+              border-color var(--dur-mid) var(--ease-out);
+}
+.timeline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+/* ── Marquee: brighter on hover ──────────────────────────────────────────── */
+
+.marquee-item {
+  transition: color var(--dur-fast);
+}
+.marquee-item:hover {
+  color: var(--accent-1);
+}
+
+/* ── Contact links: glow on hover ────────────────────────────────────────── */
+
+.contact-link {
+  transition: color var(--dur-fast), transform var(--dur-fast) var(--ease-out), opacity var(--dur-fast);
+}
+.contact-link:hover {
+  transform: translateX(5px);
+}
+
+/* ── "Currently building" live badge (hero eyebrow area) ─────────────────── */
+
+.currently-building {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent-amber);
+  border: 1px solid rgba(250, 190, 109, 0.2);
+  border-radius: var(--r-full);
+  padding: 5px 14px;
+  margin-bottom: var(--space-2);
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.currently-building .cb-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-amber);
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+/* ── Section glow accents ─────────────────────────────────────────────────── */
+
+#about::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(124, 109, 250, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(ellipse at right, rgba(109, 250, 204, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}

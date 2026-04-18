@@ -1,0 +1,147 @@
+/* ─── Timeline ────────────────────────────────────────────────────────────── */
+
+#experience {
+  background: var(--bg-secondary);
+  padding: var(--space-16) var(--space-8);
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ─── Timeline Layout ─────────────────────────────────────────────────────── */
+
+.timeline {
+  position: relative;
+  padding: var(--space-4) 0;
+}
+
+/* Center vertical line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--grad-primary);
+  transform: translateX(-50%);
+  transform-origin: top center;
+}
+
+/* ─── Entry ───────────────────────────────────────────────────────────────── */
+
+.timeline-entry {
+  position: relative;
+  width: 50%;
+  padding-bottom: var(--space-8);
+}
+
+.entry-left {
+  padding-right: var(--space-6);
+  text-align: right;
+}
+
+.entry-right {
+  margin-left: 50%;
+  padding-left: var(--space-6);
+  text-align: left;
+}
+
+/* Dot on the line */
+.timeline-dot {
+  position: absolute;
+  top: 1.2rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--dot-color, var(--accent-1));
+  border: 2px solid var(--bg-secondary);
+  box-shadow: 0 0 12px var(--dot-color, var(--accent-1));
+}
+
+.entry-left .timeline-dot {
+  right: calc(-7px - 1px); /* center on the 2px line */
+}
+
+.entry-right .timeline-dot {
+  left: calc(-7px - 1px);
+}
+
+/* ─── Card ────────────────────────────────────────────────────────────────── */
+
+.timeline-card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  transition: border-color var(--dur-mid) var(--ease-out),
+              box-shadow var(--dur-mid) var(--ease-out);
+}
+
+.timeline-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card);
+}
+
+.timeline-year {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.timeline-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.timeline-org {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.timeline-card p:last-child {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  #experience {
+    padding: var(--space-10) var(--space-3);
+  }
+
+  .timeline-line {
+    left: 16px;
+  }
+
+  .timeline-entry,
+  .entry-left,
+  .entry-right {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 48px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .entry-left .timeline-dot,
+  .entry-right .timeline-dot {
+    left: 9px;
+    right: auto;
+  }
+}
