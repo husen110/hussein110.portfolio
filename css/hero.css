@@ -297,8 +297,42 @@
 /* ─── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
-  #hero { padding: 6rem 1.5rem 3rem; }
-  .hero-title { line-height: 1; letter-spacing: -0.02em; }
-  .hero-ctas { flex-direction: column; width: 100%; }
-  .hero-ctas .btn { width: 100%; justify-content: center; }
+  #hero {
+    padding: 6rem 1.5rem 3rem;
+    overflow: hidden;
+  }
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    padding: 5px 12px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    width: 100%;
+  }
+  .hero-sub {
+    font-size: var(--text-base);
+    padding: 0 0.5rem;
+  }
+  .hero-role {
+    font-size: var(--text-sm);
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
