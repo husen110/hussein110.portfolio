@@ -25,8 +25,6 @@
   border: 0.5px solid var(--border);
   border-radius: var(--r-lg);
   padding: 2rem;
-  display: flex;
-  gap: var(--space-3);
   transition: border-color var(--dur-mid) var(--ease-out),
               transform var(--dur-mid) var(--ease-out),
               box-shadow var(--dur-mid) var(--ease-out);
@@ -36,19 +34,6 @@
   border-color: var(--card-accent, var(--border-hover));
   transform: translateY(-6px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-.achievement-icon {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--card-accent, var(--accent-1)) 15%, transparent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  line-height: 1;
 }
 
 .achievement-body {
