@@ -184,6 +184,19 @@
   transform: translateX(3px);
 }
 
+.project-action-video {
+  margin-left: auto;
+  color: var(--accent-amber);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.project-action-video:hover {
+  color: var(--text-primary);
+  transform: translateX(3px);
+}
+
 /* ── Achievement cards: colored shadow glow ──────────────────────────────── */
 
 .achievement-card:hover {

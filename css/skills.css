@@ -72,4 +72,15 @@
   #skills {
     padding: var(--space-10) var(--space-3);
   }
+
+  .skill-pill {
+    font-size: var(--text-xs);
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    gap: var(--space-4);
+  }
 }
