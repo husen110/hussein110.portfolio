@@ -36,22 +36,49 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1.8s ease-in-out;
+  transition: opacity 0.9s ease-in-out; /* paired with the 2.5s interval */
   will-change: opacity;
+  /* Centres the photo so its element box matches its painted size, which lets
+     the edge mask below line up exactly with the photo's edges. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-slide.active {
   opacity: 1;
 }
 
+/* These photos are portrait and the hero is wide, so `cover` cropped heads off.
+   Instead the photo is shown whole (`contain`) and the leftover space is filled
+   with a blurred, scaled copy of the same image — no crop, and no hard seam.
+   --slide-img is set from the <img> src by slideshow.js. */
+.hero-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--slide-img);
+  background-size: cover;
+  background-position: center center;
+  filter: blur(48px) saturate(0.5) brightness(0.45);
+  transform: scale(1.15); /* hides the blur's soft edges */
+  pointer-events: none;
+}
+
 .hero-slide img {
-  width: 100%;
+  position: relative;
+  /* Intrinsic width at full height: the element box is the photo itself, so
+     nothing is cropped and the mask below feathers the real edges. */
+  width: auto;
   height: 100%;
-  /* `contain` left a hard letterbox seam beside the photo at every width */
-  object-fit: cover;
-  object-position: center center;
+  max-width: 100%;
+  object-fit: contain;      /* whole photo, never cropped */
   display: block;
-  filter: saturate(0.7) brightness(0.6);
+  filter: saturate(0.75) brightness(0.7);
+  /* Fade the left/right edges into the blurred backdrop instead of ending
+     on a hard vertical line. */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%);
 }
 
 /* Hero content sits above slideshow */
