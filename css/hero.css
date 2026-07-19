@@ -217,7 +217,10 @@
 .scroll-indicator {
   position: absolute;
   bottom: 2.5rem;
-  left: var(--gutter-wide);
+  /* Right edge: the content is left-aligned, so a bottom-left cue collided
+     with the CTA buttons on shorter viewports. */
+  right: var(--gutter-wide);
+  left: auto;
   z-index: 3;
   display: flex;
   flex-direction: column;
