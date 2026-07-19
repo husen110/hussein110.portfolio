@@ -1,0 +1,112 @@
+/* ─── Scroll progress bar ─────────────────────────────────────────────────── */
+
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 10000;
+  background: var(--grad-primary);
+  transform: scaleX(0);
+  transform-origin: left center;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ─── Active nav link ─────────────────────────────────────────────────────── */
+
+.nav-links a.nav-active {
+  color: var(--text-primary);
+}
+
+.nav-links a.nav-active::after {
+  width: 100%;
+}
+
+/* ─── Contact link: copy feedback ─────────────────────────────────────────── */
+
+.contact-link.copied {
+  border-color: var(--accent-3);
+  color: var(--accent-3);
+}
+
+.contact-link.copied svg {
+  opacity: 1;
+}
+
+/* ─── Timeline: current role ──────────────────────────────────────────────── */
+
+.timeline-card-current {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card);
+}
+
+.timeline-now {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  padding: 2px 10px;
+  border-radius: var(--r-full);
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  color: #4ade80;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ─── Interactive hover states ────────────────────────────────────────────── */
+
+.skill-pill {
+  transition: transform var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+}
+
+.skill-pill:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
+
+.timeline-card {
+  transition: transform var(--dur-mid) var(--ease-out),
+              border-color var(--dur-mid) var(--ease-out),
+              box-shadow var(--dur-mid) var(--ease-out);
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+}
+
+.achievement-card {
+  transition: transform var(--dur-mid) var(--ease-out),
+              border-color var(--dur-mid) var(--ease-out),
+              box-shadow var(--dur-mid) var(--ease-out);
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+}
+
+/* The scroll cue crowds the stacked CTAs on narrow screens */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-pill:hover,
+  .timeline-card:hover,
+  .achievement-card:hover {
+    transform: none;
+  }
+  .timeline-now {
+    animation: none;
+  }
+}

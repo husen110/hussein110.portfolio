@@ -31,8 +31,11 @@
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   transition: opacity var(--dur-fast);
@@ -47,6 +50,9 @@
 
 .nav-links a {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 500;
@@ -54,13 +60,12 @@
   letter-spacing: 0.08em;
   color: var(--text-muted);
   transition: color var(--dur-fast);
-  padding-bottom: 3px;
 }
 
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   left: 0;
   width: 0;
   height: 1px;
@@ -76,8 +81,12 @@
 .nav-hamburger {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
-  padding: 4px;
+  width: 44px;   /* WCAG 2.2 minimum touch target */
+  height: 44px;
+  margin-right: -10px; /* keep the icon optically aligned to the gutter */
   cursor: pointer;
   background: none;
   border: none;
@@ -127,6 +136,10 @@
 }
 
 .nav-mobile-overlay a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   font-weight: 700;
@@ -138,12 +151,29 @@
 
 .nav-mobile-overlay a:hover { color: var(--text-primary); }
 
+/* LinkedIn CTA inside the mobile menu — the desktop nav button is hidden < 900px */
+.nav-mobile-cta {
+  margin-top: var(--space-5);
+  padding: 12px 28px;
+  border: 1px solid var(--border-hover);
+  border-radius: var(--r-full);
+  font-family: var(--font-body) !important;
+  font-size: var(--text-sm) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em;
+  color: var(--text-primary) !important;
+}
+
 /* ─── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
-  #navbar { padding: 20px 24px; }
-  #navbar.nav-scrolled { padding: 14px 24px; }
+  #navbar { padding: 16px var(--gutter); }
+  #navbar.nav-scrolled { padding: 12px var(--gutter); }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .nav-mobile-overlay { display: flex; }
+}
+
+@media (max-width: 900px) {
+  #navbar { padding: 20px var(--gutter); }
 }

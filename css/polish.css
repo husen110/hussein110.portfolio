@@ -3,6 +3,9 @@
 /* ── Nav: Download CV button ─────────────────────────────────────────────── */
 
 .nav-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 600;
@@ -11,7 +14,7 @@
   color: var(--text-primary);
   border: 1px solid var(--border-hover);
   border-radius: var(--r-full);
-  padding: 8px 20px;
+  padding: 8px 22px;
   transition: background var(--dur-fast) var(--ease-out),
               border-color var(--dur-fast),
               transform var(--dur-fast) var(--ease-out),
@@ -23,7 +26,7 @@
   background: var(--grad-primary);
   border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(124, 109, 250, 0.35);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.35);
 }
 
 @media (max-width: 900px) {
@@ -88,7 +91,7 @@
 /* ── Hero: stronger glow under title ─────────────────────────────────────── */
 
 .hero-title {
-  filter: drop-shadow(0 0 60px rgba(124, 109, 250, 0.12));
+  filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.08));
 }
 
 /* ── Hero eyebrow pulse boost ────────────────────────────────────────────── */
@@ -112,10 +115,10 @@
 }
 
 .project-card[data-glow="purple"]:hover {
-  border-color: rgba(124, 109, 250, 0.55);
+  border-color: rgba(255, 255, 255, 0.55);
   box-shadow: 0 32px 80px rgba(0,0,0,0.55),
-              0 0 0 1px rgba(124, 109, 250, 0.25),
-              0 0 60px rgba(124, 109, 250, 0.12);
+              0 0 0 1px rgba(255, 255, 255, 0.25),
+              0 0 60px rgba(255, 255, 255, 0.12);
 }
 .project-card[data-glow="blue"]:hover {
   border-color: rgba(55, 138, 221, 0.55);
@@ -155,11 +158,11 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  min-height: 44px; /* WCAG 2.2 target size */
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   transition: color var(--dur-fast), transform var(--dur-fast) var(--ease-out);
-  padding: 4px 0;
 }
 
 .project-action svg {
@@ -211,12 +214,12 @@
   background: rgba(18, 18, 31, 0.6) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(124, 109, 250, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   transition: border-color var(--dur-mid), box-shadow var(--dur-mid), transform var(--dur-mid);
 }
 .stat-card:hover {
-  border-color: rgba(124, 109, 250, 0.45) !important;
-  box-shadow: 0 16px 48px rgba(124, 109, 250, 0.15);
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 16px 48px rgba(255, 255, 255, 0.15);
   transform: translateY(-4px);
 }
 
@@ -231,8 +234,8 @@
 }
 .skill-pill:hover {
   color: var(--accent-1);
-  border-color: rgba(124, 109, 250, 0.5);
-  background: rgba(124, 109, 250, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* ── Timeline cards: subtle lift ────────────────────────────────────────── */
@@ -265,31 +268,6 @@
   transform: translateX(5px);
 }
 
-/* ── "Currently building" live badge (hero eyebrow area) ─────────────────── */
-
-.currently-building {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  color: var(--accent-amber);
-  border: 1px solid rgba(250, 190, 109, 0.2);
-  border-radius: var(--r-full);
-  padding: 5px 14px;
-  margin-bottom: var(--space-2);
-  opacity: 0;
-  transform: translateY(16px);
-}
-
-.currently-building .cb-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent-amber);
-  animation: dotPulse 2s ease-in-out infinite;
-}
-
 /* ── Section glow accents ─────────────────────────────────────────────────── */
 
 #about::before {
@@ -298,9 +276,9 @@
   top: -120px;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
+  width: min(600px, 100%); /* an unconstrained 600px pushed the page sideways on phones */
   height: 600px;
-  background: radial-gradient(ellipse, rgba(124, 109, 250, 0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -310,9 +288,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 400px;
+  width: min(400px, 60vw);
   height: 400px;
-  background: radial-gradient(ellipse at right, rgba(109, 250, 204, 0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse at right, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }

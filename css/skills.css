@@ -1,7 +1,7 @@
 /* ─── Skills ──────────────────────────────────────────────────────────────── */
 
 #skills {
-  padding: var(--space-16) var(--space-8);
+  padding: var(--space-section) var(--gutter);
   background: var(--bg-primary);
   position: relative;
   z-index: 2;
@@ -61,7 +61,7 @@
 
 .skill-pill:hover {
   border-color: var(--border-hover);
-  background: rgba(124, 109, 250, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
   transform: scale(1.05) translateY(-2px);
 }
@@ -69,10 +69,6 @@
 /* ─── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
-  #skills {
-    padding: var(--space-10) var(--space-3);
-  }
-
   .skill-pill {
     font-size: var(--text-xs);
     padding: 6px 14px;

@@ -1,14 +1,14 @@
 /* ─── Projects ────────────────────────────────────────────────────────────── */
 
 #projects {
-  padding: var(--space-16) 0;
+  padding: var(--space-section) 0;
   position: relative;
   z-index: 2;
   background: var(--bg-primary);
 }
 
 .projects-header {
-  padding: 0 var(--space-8) var(--space-6);
+  padding: 0 var(--gutter) var(--space-6);
 }
 
 .projects-header .section-eyebrow {
@@ -39,13 +39,16 @@
 .projects-track {
   display: flex;
   gap: var(--space-3);
-  padding: var(--space-2) var(--space-8) var(--space-6);
+  padding: var(--space-2) var(--gutter) var(--space-6);
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
   cursor: grab;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  /* Snap so a swipe lands on a card instead of drifting between two */
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
 }
 
 .projects-track::-webkit-scrollbar {
@@ -66,6 +69,7 @@
   overflow: hidden;
   width: 360px;
   flex-shrink: 0;
+  scroll-snap-align: start;
   transition: transform var(--dur-mid) var(--ease-out),
               box-shadow var(--dur-mid) var(--ease-out),
               border-color var(--dur-mid) var(--ease-out);
@@ -90,7 +94,7 @@
 
 .project-monogram {
   font-family: var(--font-display);
-  font-size: 3.5rem;
+  font-size: 2.75rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.15);
   letter-spacing: -0.04em;
@@ -154,13 +158,14 @@
 }
 
 @media (max-width: 768px) {
-  #projects { padding: var(--space-10) 0; }
-  .projects-header { padding: 0 var(--space-3) var(--space-4); }
-  .projects-track  { padding: var(--space-2) var(--space-3) var(--space-4); gap: var(--space-3); }
-  .project-card    { width: 80vw; max-width: 320px; }
+  .projects-header { padding: 0 var(--gutter) var(--space-4); }
+  .projects-track  { padding: var(--space-2) var(--gutter) var(--space-4); }
+  .project-card    { width: min(80vw, 320px); }
   .project-thumb   { height: 180px; }
+  /* The fade would sit on top of the card the user is reading */
+  .projects-scroll-wrap::after { width: 48px; }
 }
 
 @media (max-width: 480px) {
-  .project-card { width: 88vw; }
+  .project-card { width: 86vw; }
 }

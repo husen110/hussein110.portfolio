@@ -1,7 +1,7 @@
 /* ─── About ───────────────────────────────────────────────────────────────── */
 
 #about {
-  padding: var(--space-16) var(--space-8);
+  padding: var(--space-section) var(--gutter);
   background: var(--bg-primary);
   position: relative;
   z-index: 2;
@@ -96,10 +96,6 @@
 }
 
 @media (max-width: 768px) {
-  #about {
-    padding: var(--space-10) var(--space-3);
-  }
-
   .stats-grid {
     grid-template-columns: 1fr 1fr;
   }

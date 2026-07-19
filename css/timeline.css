@@ -2,7 +2,7 @@
 
 #experience {
   background: var(--bg-secondary);
-  padding: var(--space-16) var(--space-8);
+  padding: var(--space-section) var(--gutter);
   position: relative;
   z-index: 2;
 }
@@ -120,13 +120,11 @@
 
 /* ─── Responsive ──────────────────────────────────────────────────────────── */
 
-@media (max-width: 768px) {
-  #experience {
-    padding: var(--space-10) var(--space-3);
-  }
-
+/* Below 900px the two-column zigzag squeezes cards too narrow to read —
+   collapse to a single left rail before it gets there. */
+@media (max-width: 900px) {
   .timeline-line {
-    left: 16px;
+    left: 7px;
   }
 
   .timeline-entry,
@@ -134,14 +132,15 @@
   .entry-right {
     width: 100%;
     margin-left: 0;
-    padding-left: 48px;
+    padding-left: 40px;
     padding-right: 0;
+    padding-bottom: var(--space-5);
     text-align: left;
   }
 
   .entry-left .timeline-dot,
   .entry-right .timeline-dot {
-    left: 9px;
+    left: 0;
     right: auto;
   }
 }

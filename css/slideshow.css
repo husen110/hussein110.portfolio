@@ -11,10 +11,19 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(8,8,12,0.92) 38%, rgba(8,8,12,0.55) 65%, rgba(8,8,12,0.3) 100%),
-    linear-gradient(to top, rgba(8,8,12,0.85) 0%, transparent 40%);
+    linear-gradient(to right, rgba(8,8,12,0.94) 30%, rgba(8,8,12,0.6) 70%, rgba(8,8,12,0.35) 100%),
+    linear-gradient(to top, rgba(8,8,12,0.85) 0%, transparent 45%);
   z-index: 1;
   pointer-events: none;
+}
+
+/* On phones the text spans the full width, so the photo needs to recede further */
+@media (max-width: 768px) {
+  .hero-slideshow::after {
+    background:
+      linear-gradient(to right, rgba(8,8,12,0.93) 0%, rgba(8,8,12,0.82) 100%),
+      linear-gradient(to top, rgba(8,8,12,0.9) 0%, transparent 55%);
+  }
 }
 
 .hero-slides-track {
@@ -38,10 +47,11 @@
 .hero-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  /* `contain` left a hard letterbox seam beside the photo at every width */
+  object-fit: cover;
   object-position: center center;
   display: block;
-  filter: saturate(0.7) brightness(0.75);
+  filter: saturate(0.7) brightness(0.6);
 }
 
 /* Hero content sits above slideshow */
@@ -53,9 +63,4 @@
 .scroll-indicator {
   position: relative;
   z-index: 2;
-}
-
-.hero-orb,
-#particles {
-  z-index: 1;
 }

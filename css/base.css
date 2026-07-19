@@ -24,7 +24,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: rgba(124, 109, 250, 0.3);
+  background: rgba(255, 255, 255, 0.3);
   color: var(--text-primary);
 }
 
@@ -89,12 +89,49 @@ code, .mono {
 }
 
 .section-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--space-8);
 }
 
-.section-header h2 {
+.section-header h2,
+#about h2,
+#contact h2 {
   margin-top: var(--space-1);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.35em;
+}
+
+/* Underline draws itself in when the heading scrolls into view */
+.section-header h2::after,
+#about h2::after,
+#contact h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--grad-primary);
+  border-radius: var(--r-full);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.7s var(--ease-out);
+}
+
+.section-header.in-view h2::after,
+#about h2.in-view::after,
+#contact h2.in-view::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-header h2::after,
+  #about h2::after,
+  #contact h2::after {
+    transition: none;
+    transform: scaleX(1);
+  }
 }
 
 /* ─── Buttons ─────────────────────────────────────────────────────────────── */
@@ -102,8 +139,10 @@ code, .mono {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 1rem 2.2rem;
+  min-height: 48px;
+  padding: 0.9rem 2.2rem;
   border-radius: var(--r-full);
   font-family: var(--font-body);
   font-size: var(--text-base);
@@ -117,7 +156,7 @@ code, .mono {
 
 .btn-primary {
   background: var(--grad-primary);
-  color: #fff;
+  color: #08080f; /* dark on the light gradient — #fff was invisible */
 }
 
 .btn-primary:hover {
@@ -132,16 +171,8 @@ code, .mono {
 }
 
 .btn-outline:hover {
-  background: rgba(124, 109, 250, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-3px);
-}
-
-/* ─── Float Animation for Orbs ───────────────────────────────────────────── */
-
-@keyframes float {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-40px); }
-  100% { transform: translateY(0px); }
 }
 
 /* ─── Pulse Animation ─────────────────────────────────────────────────────── */

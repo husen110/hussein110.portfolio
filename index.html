@@ -7,29 +7,37 @@
   <meta name="author" content="Hussein Saifee Petladwala" />
   <title>Hussein Saifee — AI Engineer & Business Automation Engineer</title>
 
+  <!-- Inline SVG favicon — no extra request, scales on any display -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080810'/%3E%3Ctext x='32' y='45' font-family='Syne,Verdana,sans-serif' font-size='40' font-weight='800' fill='%23f5f5f5' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#080810" />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/tokens.css?v=3" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/nav.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/marquee.css" />
-  <link rel="stylesheet" href="css/about.css" />
-  <link rel="stylesheet" href="css/achievements.css" />
-  <link rel="stylesheet" href="css/projects.css" />
-  <link rel="stylesheet" href="css/skills.css" />
-  <link rel="stylesheet" href="css/timeline.css" />
-  <link rel="stylesheet" href="css/contact.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/polish.css" />
-  <link rel="stylesheet" href="css/slideshow.css" />
+  <link rel="stylesheet" href="css/reset.css?v=10" />
+  <link rel="stylesheet" href="css/tokens.css?v=10" />
+  <link rel="stylesheet" href="css/base.css?v=10" />
+  <link rel="stylesheet" href="css/nav.css?v=10" />
+  <link rel="stylesheet" href="css/hero.css?v=10" />
+  <link rel="stylesheet" href="css/marquee.css?v=10" />
+  <link rel="stylesheet" href="css/about.css?v=10" />
+  <link rel="stylesheet" href="css/achievements.css?v=10" />
+  <link rel="stylesheet" href="css/projects.css?v=10" />
+  <link rel="stylesheet" href="css/skills.css?v=10" />
+  <link rel="stylesheet" href="css/timeline.css?v=10" />
+  <link rel="stylesheet" href="css/contact.css?v=10" />
+  <link rel="stylesheet" href="css/footer.css?v=10" />
+  <link rel="stylesheet" href="css/polish.css?v=10" />
+  <link rel="stylesheet" href="css/slideshow.css?v=10" />
+  <link rel="stylesheet" href="css/interactions.css?v=10" />
 </head>
 <body>
+
+  <!-- ═══ SCROLL PROGRESS ═════════════════════════════════════════════════ -->
+  <div id="scrollProgress" aria-hidden="true"></div>
 
   <!-- ═══ CUSTOM CURSOR ═══════════════════════════════════════════════════ -->
   <div id="cursor-dot" aria-hidden="true"></div>
@@ -56,7 +64,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="Hussein_Resume_Final.pdf" class="nav-cv-btn" download="Hussein_Saifee_Resume.pdf" aria-label="Download CV">Download CV ↓</a>
+    <a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" class="nav-cv-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn ↗</a>
     <button class="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -70,6 +78,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
     </ul>
   </div>
 
@@ -77,21 +86,12 @@
 
     <!-- ═══ HERO ═════════════════════════════════════════════════════════ -->
     <section id="hero" aria-label="Hero section">
-      <!-- Background orbs -->
-      <div class="hero-orb orb-1" aria-hidden="true"></div>
-      <div class="hero-orb orb-2" aria-hidden="true"></div>
-      <div class="hero-orb orb-3" aria-hidden="true"></div>
-
-      <!-- Particles canvas -->
-      <canvas id="particles" aria-hidden="true"></canvas>
-
       <!-- Hero slideshow -->
       <div class="hero-slideshow" aria-hidden="true">
         <div class="hero-slides-track" id="heroSlidesTrack">
           <div class="hero-slide active"><img src="images/event1.jpeg" alt="" loading="eager" /></div>
           <div class="hero-slide"><img src="images/event2.jpeg" alt="" loading="lazy" /></div>
           <div class="hero-slide"><img src="images/event3.jpeg" alt="" loading="lazy" /></div>
-          <div class="hero-slide"><img src="images/event4.jpeg" alt="" loading="lazy" /></div>
           <div class="hero-slide"><img src="images/event5.jpeg" alt="" loading="lazy" /></div>
           <div class="hero-slide"><img src="images/event6.jpeg" alt="" loading="lazy" /></div>
         </div>
@@ -100,9 +100,9 @@
       <!-- Hero content -->
       <div class="hero-content">
         <!-- Eyebrow pill -->
-        <div class="hero-eyebrow" aria-label="Status: Available for internships">
+        <div class="hero-eyebrow" aria-label="Currently AI Engineer Intern at Rubikon Labs">
           <span class="eyebrow-dot" aria-hidden="true"></span>
-          Available for Internships &middot; Pune, India
+          AI Engineer Intern @ Rubikon Labs &middot; Pune, India
         </div>
 
         <!-- Headline -->
@@ -129,7 +129,7 @@
         <div class="hero-ctas">
           <a href="#projects" class="btn btn-primary btn-magnetic">View My Work &rarr;</a>
           <a href="#contact"  class="btn btn-outline btn-magnetic">Let's Talk</a>
-          <a href="Hussein_Resume_Final.pdf" class="btn btn-outline btn-magnetic" download="Hussein_Saifee_Resume.pdf">Download CV ↓</a>
+          <a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" class="btn btn-outline btn-magnetic" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
         </div>
       </div>
 
@@ -150,6 +150,7 @@
         <span class="marquee-item">LLM Integration</span><span class="marquee-dot"></span>
         <span class="marquee-item">Hackathon Winner</span><span class="marquee-dot"></span>
         <span class="marquee-item">DigiVyapar Technologies</span><span class="marquee-dot"></span>
+        <span class="marquee-item">Rubikon Labs</span><span class="marquee-dot"></span>
         <span class="marquee-item">GSAP Animations</span><span class="marquee-dot"></span>
         <span class="marquee-item">OpenAI API</span><span class="marquee-dot"></span>
         <span class="marquee-item">ElevenLabs</span><span class="marquee-dot"></span>
@@ -485,8 +486,19 @@
         <div class="timeline">
           <div class="timeline-line" aria-hidden="true"></div>
 
-          <!-- Entry 1 -->
+          <!-- Entry 1 — current role -->
           <div class="timeline-entry entry-left">
+            <div class="timeline-dot" style="--dot-color: var(--accent-2);" aria-hidden="true"></div>
+            <article class="timeline-card timeline-card-current">
+              <span class="timeline-year mono" style="color: var(--accent-2);">May 2026 – Present</span>
+              <h3>AI Engineer Intern <span class="timeline-now">Now</span></h3>
+              <p class="timeline-org">Rubikon Labs Pvt. Ltd.</p>
+              <p>Building and shipping production AI systems — LLM-backed workflows, model integration, and automation tooling. Started 21 May 2026.</p>
+            </article>
+          </div>
+
+          <!-- Entry 2 -->
+          <div class="timeline-entry entry-right">
             <div class="timeline-dot" style="--dot-color: var(--accent-1);" aria-hidden="true"></div>
             <article class="timeline-card">
               <span class="timeline-year mono" style="color: var(--accent-1);">2024 – Present</span>
@@ -496,8 +508,8 @@
             </article>
           </div>
 
-          <!-- Entry 2 -->
-          <div class="timeline-entry entry-right">
+          <!-- Entry 3 -->
+          <div class="timeline-entry entry-left">
             <div class="timeline-dot" style="--dot-color: var(--accent-2);" aria-hidden="true"></div>
             <article class="timeline-card">
               <span class="timeline-year mono" style="color: var(--accent-2);">2024 – Present</span>
@@ -507,8 +519,8 @@
             </article>
           </div>
 
-          <!-- Entry 3 -->
-          <div class="timeline-entry entry-left">
+          <!-- Entry 4 -->
+          <div class="timeline-entry entry-right">
             <div class="timeline-dot" style="--dot-color: var(--accent-3);" aria-hidden="true"></div>
             <article class="timeline-card">
               <span class="timeline-year mono" style="color: var(--accent-3);">2024</span>
@@ -518,7 +530,7 @@
             </article>
           </div>
 
-          <!-- Entry 4 -->
+          <!-- Entry 5 -->
           <div class="timeline-entry entry-left">
             <div class="timeline-dot" style="--dot-color: var(--accent-3);" aria-hidden="true"></div>
             <article class="timeline-card">
@@ -529,7 +541,7 @@
             </article>
           </div>
 
-          <!-- Entry 5 -->
+          <!-- Entry 6 -->
           <div class="timeline-entry entry-right">
             <div class="timeline-dot" style="--dot-color: var(--accent-amber);" aria-hidden="true"></div>
             <article class="timeline-card">
@@ -552,7 +564,7 @@
           Let's Build <span class="gradient-text-hero">Something</span>
         </h2>
         <p class="contact-sub reveal">
-          Open for AI/automation internships, freelance projects, and collaborations. Based in Pune — available remotely worldwide.
+          Open to AI/automation projects, freelance work, and collaborations. Based in Pune — available remotely worldwide.
         </p>
 
         <!-- Contact links -->
@@ -561,9 +573,9 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.72 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.63 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.51 5.51l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             +91 91737 35384
           </a>
-          <a href="mailto:hussein.saif110@gmail.com" class="contact-link btn-magnetic" aria-label="Email Hussein">
+          <a href="mailto:hussein.saif110@gmail.com" class="contact-link btn-magnetic" aria-label="Email Hussein — click to copy address">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            hussein.saif110@gmail.com
+            <span class="contact-link-text">hussein.saif110@gmail.com</span>
           </a>
           <a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" target="_blank" rel="noopener noreferrer" class="contact-link btn-magnetic" aria-label="LinkedIn profile">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -620,7 +632,6 @@
   <!-- ═══ LOCAL SCRIPTS ════════════════════════════════════════════════ -->
   <script src="js/loader.js"></script>
   <script src="js/cursor.js"></script>
-  <script src="js/particles.js"></script>
   <script src="js/lenis.js"></script>
   <script src="js/marquee.js"></script>
   <script src="js/magnetic.js"></script>
@@ -628,6 +639,7 @@
   <script src="js/motion-animations.js"></script>
   <script src="js/polish.js"></script>
   <script src="js/slideshow.js"></script>
+  <script src="js/interactions.js?v=3"></script>
 
 </body>
 </html>

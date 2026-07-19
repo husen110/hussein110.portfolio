@@ -1,9 +1,9 @@
-// ─── Motion (Framer) — Spring hover & scroll-linked effects ───────────────────
+// ─── Motion (Framer) — Spring hover & in-view effects ─────────────────────────
 
 (function () {
   if (typeof Motion === 'undefined') return;
 
-  const { animate, scroll, inView } = Motion;
+  const { animate, inView } = Motion;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reducedMotion) return;
 
@@ -45,19 +45,6 @@
       { type: 'spring', stiffness: 260, damping: 20, delay: 0.1 }
     );
   }, { margin: '-15% 0px' });
-
-  // ── Hero orb scroll parallax ───────────────────────────────────────────────
-  const orbs = [
-    { el: document.querySelector('.orb-1'), speed: 0.18 },
-    { el: document.querySelector('.orb-2'), speed: -0.12 },
-    { el: document.querySelector('.orb-3'), speed: 0.09 },
-  ];
-
-  scroll(({ y }) => {
-    orbs.forEach(({ el, speed }) => {
-      if (el) el.style.transform = `translateY(${y.current * speed}px)`;
-    });
-  });
 
   // ── Timeline dot pulse on enter ────────────────────────────────────────────
   document.querySelectorAll('.timeline-dot').forEach((dot) => {

@@ -1,8 +1,8 @@
 /* ─── Contact ─────────────────────────────────────────────────────────────── */
 
 #contact {
-  padding: var(--space-16) var(--space-8);
-  text-align: center;
+  padding: var(--space-section) var(--gutter);
+  text-align: left;
   background: var(--bg-primary);
   position: relative;
   z-index: 2;
@@ -22,11 +22,11 @@
 .contact-inner {
   position: relative;
   z-index: 1;
-  max-width: 640px;
-  margin: 0 auto;
+  max-width: 720px;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-4);
 }
 
@@ -42,7 +42,7 @@
   color: var(--text-secondary);
   max-width: 500px;
   line-height: 1.7;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* ─── Contact Links ───────────────────────────────────────────────────────── */
@@ -51,12 +51,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .contact-link {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   gap: 8px;
   font-family: var(--font-body);
   font-size: var(--text-sm);
@@ -79,7 +80,7 @@
 
 .contact-link:hover {
   border-color: var(--border-hover);
-  background: rgba(124, 109, 250, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--text-primary);
   transform: translateY(-2px);
 }
@@ -92,8 +93,8 @@
 
 .contact-form {
   width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
+  max-width: 520px;
+  margin: 0;
   margin-top: var(--space-4);
   display: flex;
   flex-direction: column;
@@ -149,10 +150,6 @@
 /* ─── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
-  #contact {
-    padding: var(--space-10) var(--space-3);
-  }
-
   .contact-inner h2 {
     font-size: var(--text-2xl);
   }

@@ -2,7 +2,7 @@
 
 #achievements {
   background: var(--bg-secondary);
-  padding: var(--space-16) var(--space-8);
+  padding: var(--space-section) var(--gutter);
   position: relative;
   z-index: 2;
 }
@@ -70,10 +70,6 @@
 /* ─── Responsive ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
-  #achievements {
-    padding: var(--space-10) var(--space-3);
-  }
-
   .achievements-grid {
     grid-template-columns: 1fr;
   }
