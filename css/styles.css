@@ -382,3 +382,19 @@ em { font-family: var(--font-serif); font-style: italic; font-weight: 400; lette
   .contact-links li + li { border-top: 1px solid var(--line); }
   .hero-meta { gap: 8px 18px; }
 }
+
+/* ── Current role emphasis ──────────────────────────────────────── */
+a.status { transition: border-color .2s var(--ease), background-color .2s var(--ease); }
+a.status:hover { border-color: rgba(61, 214, 140, .45); background: rgba(61, 214, 140, .06); }
+.status-arrow { color: var(--text-3); transition: transform .2s var(--ease), color .2s; }
+a.status:hover .status-arrow { transform: translateX(3px); color: var(--text); }
+.row-current {
+  margin: 12px 0; padding: 28px; border: 1px solid rgba(61, 214, 140, .25); border-radius: var(--radius);
+  background: linear-gradient(160deg, rgba(61, 214, 140, .07), var(--bg-raised) 55%);
+}
+.rows .row-current:first-child { margin-top: 16px; }
+.row-current .tags { margin-top: 16px; }
+@media (max-width: 720px) { .row-current { padding: 22px; } }
+.row-current { grid-template-columns: 172px 1fr; }
+.row-current .row-body > p:nth-of-type(2) { margin-top: 10px; color: var(--text-2); max-width: 64ch; font-size: 15px; }
+@media (max-width: 720px) { .row-current { grid-template-columns: 1fr; } }
