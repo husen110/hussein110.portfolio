@@ -2,644 +2,386 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hussein Saifee Petladwala — AI Engineer. Building intelligent systems and automation platforms." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hussein Saifee Petladwala — AI &amp; Automation Engineer</title>
+  <meta name="description" content="Hussein Saifee Petladwala — AI & automation engineer in Pune. LLM workflows, voice agents and automation systems that replace manual work." />
   <meta name="author" content="Hussein Saifee Petladwala" />
-  <title>Hussein Saifee — AI Engineer & Business Automation Engineer</title>
+  <meta name="theme-color" content="#0b0b0c" />
 
-  <!-- Inline SVG favicon — no extra request, scales on any display -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080810'/%3E%3Ctext x='32' y='45' font-family='Syne,Verdana,sans-serif' font-size='40' font-weight='800' fill='%23f5f5f5' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" />
-  <meta name="theme-color" content="#080810" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hussein Saifee Petladwala — AI & Automation Engineer" />
+  <meta property="og:description" content="I build AI systems that run real businesses. LLM workflows, voice agents and automation pipelines." />
+  <meta property="og:image" content="images/pandora-hackathon.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Google Fonts -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0c'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='%23ededef' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css?v=15" />
-  <link rel="stylesheet" href="css/tokens.css?v=15" />
-  <link rel="stylesheet" href="css/base.css?v=15" />
-  <link rel="stylesheet" href="css/nav.css?v=15" />
-  <link rel="stylesheet" href="css/hero.css?v=15" />
-  <link rel="stylesheet" href="css/marquee.css?v=15" />
-  <link rel="stylesheet" href="css/about.css?v=15" />
-  <link rel="stylesheet" href="css/achievements.css?v=15" />
-  <link rel="stylesheet" href="css/projects.css?v=15" />
-  <link rel="stylesheet" href="css/skills.css?v=15" />
-  <link rel="stylesheet" href="css/timeline.css?v=15" />
-  <link rel="stylesheet" href="css/contact.css?v=15" />
-  <link rel="stylesheet" href="css/footer.css?v=15" />
-  <link rel="stylesheet" href="css/polish.css?v=15" />
-  <link rel="stylesheet" href="css/slideshow.css?v=15" />
-  <link rel="stylesheet" href="css/interactions.css?v=15" />
+  <link rel="stylesheet" href="css/styles.css?v=20" />
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ═══ SCROLL PROGRESS ═════════════════════════════════════════════════ -->
-  <div id="scrollProgress" aria-hidden="true"></div>
-
-  <!-- ═══ CUSTOM CURSOR ═══════════════════════════════════════════════════ -->
-  <div id="cursor-dot" aria-hidden="true"></div>
-  <div id="cursor-ring" aria-hidden="true"></div>
-
-  <!-- ═══ LOADING SCREEN ══════════════════════════════════════════════════ -->
-  <div id="loader" role="status" aria-label="Loading">
-    <div class="loader-content">
-      <div class="loader-logo">Hussein.</div>
-      <div class="loader-bar-wrap">
-        <div class="loader-bar" id="loader-bar"></div>
-      </div>
-      <div class="loader-counter" id="loader-counter">0%</div>
+  <!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="nav-brand" aria-label="Hussein Saifee — home">
+        <span class="nav-mark" aria-hidden="true">HS</span>
+        <span>Hussein Saifee</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-small nav-cta" href="Hussein_Resume_Final.pdf" target="_blank" rel="noopener">Résumé</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
     </div>
-  </div>
-
-  <!-- ═══ NAVBAR ══════════════════════════════════════════════════════════ -->
-  <nav id="navbar" role="navigation" aria-label="Main navigation">
-    <a href="#hero" class="nav-logo gradient-text" aria-label="Hussein Saifee home">Hussein.</a>
-    <ul class="nav-links" role="list">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" class="nav-cv-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn ↗</a>
-    <button class="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- Mobile nav overlay -->
-  <div class="nav-mobile-overlay" id="navMobileOverlay" aria-hidden="true">
-    <ul role="list">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
-    </ul>
-  </div>
-
-  <main>
-
-    <!-- ═══ HERO ═════════════════════════════════════════════════════════ -->
-    <section id="hero" aria-label="Hero section">
-      <!-- Hero slideshow -->
-      <div class="hero-slideshow" aria-hidden="true">
-        <div class="hero-slides-track" id="heroSlidesTrack">
-          <div class="hero-slide active"><img src="images/event1.jpeg" alt="" loading="eager" /></div>
-          <div class="hero-slide"><img src="images/event2.jpeg" alt="" loading="lazy" /></div>
-          <div class="hero-slide"><img src="images/event3.jpeg" alt="" loading="lazy" /></div>
-          <div class="hero-slide"><img src="images/event5.jpeg" alt="" loading="lazy" /></div>
-          <div class="hero-slide"><img src="images/event6.jpeg" alt="" loading="lazy" /></div>
-        </div>
-      </div>
-
-      <!-- Hero content -->
-      <div class="hero-content">
-        <!-- Eyebrow pill -->
-        <div class="hero-eyebrow" aria-label="Currently AI Engineer Intern at Rubikon Labs">
-          <span class="eyebrow-dot" aria-hidden="true"></span>
-          AI Engineer Intern @ Rubikon Labs &middot; Pune, India
-        </div>
-
-        <!-- Headline -->
-        <h1 class="hero-title" aria-label="Building Intelligent Systems">
-          <span class="word"><span class="word-inner">Building</span></span>
-          <span class="word"><span class="word-inner gradient-text-hero">Intelligent</span></span>
-          <span class="word"><span class="word-inner">Systems</span></span>
-        </h1>
-
-        <!-- Role title -->
-        <p class="hero-role">Business AI Automation Engineer</p>
-
-        <!-- Typewriter -->
-        <div class="hero-typewriter" aria-live="polite">
-          <span id="typewriterText"></span><span class="typewriter-cursor" aria-hidden="true"></span>
-        </div>
-
-        <!-- Sub-tagline -->
-        <p class="hero-sub">
-          AI Engineer crafting automation platforms, intelligent systems, and scalable products for the real world.
-        </p>
-
-        <!-- CTAs -->
-        <div class="hero-ctas">
-          <a href="#projects" class="btn btn-primary btn-magnetic">View My Work &rarr;</a>
-          <a href="#contact"  class="btn btn-outline btn-magnetic">Let's Talk</a>
-          <a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" class="btn btn-outline btn-magnetic" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        </div>
-      </div>
-
-      <!-- Scroll indicator -->
-      <div class="scroll-indicator" aria-hidden="true">
-        <span class="scroll-text">Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <!-- ═══ MARQUEE ═══════════════════════════════════════════════════════ -->
-    <div class="marquee-section" aria-hidden="true">
-      <div class="marquee-track" id="marqueeTrack">
-        <span class="marquee-item">AI Automation</span><span class="marquee-dot"></span>
-        <span class="marquee-item">AI Automation Engineer</span><span class="marquee-dot"></span>
-        <span class="marquee-item">n8n Expert</span><span class="marquee-dot"></span>
-        <span class="marquee-item">React Native</span><span class="marquee-dot"></span>
-        <span class="marquee-item">LLM Integration</span><span class="marquee-dot"></span>
-        <span class="marquee-item">Hackathon Winner</span><span class="marquee-dot"></span>
-        <span class="marquee-item">DigiVyapar Technologies</span><span class="marquee-dot"></span>
-        <span class="marquee-item">Rubikon Labs</span><span class="marquee-dot"></span>
-        <span class="marquee-item">GSAP Animations</span><span class="marquee-dot"></span>
-        <span class="marquee-item">OpenAI API</span><span class="marquee-dot"></span>
-        <span class="marquee-item">ElevenLabs</span><span class="marquee-dot"></span>
-        <span class="marquee-item">Supabase</span><span class="marquee-dot"></span>
-        <span class="marquee-item">IIT Bombay Eureka</span><span class="marquee-dot"></span>
-      </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="Hussein_Resume_Final.pdf" target="_blank" rel="noopener">Résumé ↗</a>
     </div>
+  </header>
 
-    <!-- ═══ ABOUT ══════════════════════════════════════════════════════════ -->
-    <section id="about" aria-labelledby="about-heading">
-      <div class="about-inner">
-        <!-- Left: text -->
-        <div class="about-text">
-          <span class="section-eyebrow reveal">About Me</span>
-          <h2 id="about-heading" class="reveal">Engineering Intelligent Systems</h2>
-          <p class="reveal">
-            I'm a final year B.Tech CSE (AI) student at GHRCEM Pune, building real products while still in college. As Technical Head and lead developer of Digivyapar Technologies, I don't just study AI — I deploy it.
+  <main id="main">
+    <!-- ═══ HERO ════════════════════════════════════════════════════ -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            AI Engineer Intern at <strong>Rubikon Labs</strong>
           </p>
-          <p class="reveal">
-            From n8n automation workflows to ElevenLabs voice agents, I build end-to-end intelligent systems that save time, reduce cost, and help businesses scale without hiring more people.
+          <h1 class="hero-title reveal">
+            I build AI systems that <em>run</em> real&nbsp;businesses.
+          </h1>
+          <p class="hero-lede reveal">
+            I'm Hussein Saifee Petladwala, an AI &amp; automation engineer in Pune and a final-year
+            B.Tech CSE (AI) student. I design LLM workflows, voice agents and automation pipelines that
+            take repetitive work off people's plates, and I ship them to production.
           </p>
-          <p class="about-mono mono reveal">GHRCEM &middot; B.Tech CSE (AI) &middot; Minor: Data Science</p>
+          <div class="hero-actions reveal">
+            <a href="#work" class="btn btn-primary">See selected work <span aria-hidden="true">↓</span></a>
+            <a href="Hussein_Resume_Final.pdf" class="btn" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
+          </div>
+          <ul class="hero-meta reveal" aria-label="Quick facts">
+            <li>Pune, India · IST</li>
+            <li>Open to roles &amp; freelance</li>
+            <li><a href="https://github.com/husen110" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          </ul>
         </div>
 
-        <!-- Right: stat grid -->
-        <div class="stats-grid">
-          <div class="stat-card reveal" role="figure" aria-label="CGPA 8.55">
-            <div class="stat-number gradient-text" data-count="8.55">8.55</div>
-            <div class="stat-label">CGPA — Academic performance</div>
-          </div>
-          <div class="stat-card reveal" role="figure" aria-label="Number 1 Pandora Hackathon winner">
-            <div class="stat-number gradient-text">#1</div>
-            <div class="stat-label">Pandora Hackathon 2026 winner</div>
-          </div>
-          <div class="stat-card reveal" role="figure" aria-label="3 DigiVyapar AI modules built">
-            <div class="stat-number gradient-text" data-count="3">3</div>
-            <div class="stat-label">DigiVyapar AI modules built</div>
-          </div>
-          <div class="stat-card reveal" role="figure" aria-label="10 plus production automations shipped">
-            <div class="stat-number gradient-text" data-count="10" data-suffix="+">10+</div>
-            <div class="stat-label">Production automations shipped</div>
-          </div>
-        </div>
+        <figure class="hero-photo reveal">
+          <img src="images/pandora-hackathon.jpg" width="930" height="1163"
+               alt="Hussein receiving the winner's certificate with his team at Pandora Hackathon 2026" fetchpriority="high" />
+          <figcaption>
+            <span class="badge">1st place</span>
+            Pandora Hackathon 2026 · 100+ teams
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="container">
+        <dl class="stats reveal">
+          <div><dt>Production automations shipped</dt><dd>10+</dd></div>
+          <div><dt>Pandora Hackathon 2026</dt><dd>#1</dd></div>
+          <div><dt>IIT Bombay Eureka</dt><dd>Semi-final</dd></div>
+          <div><dt>CGPA, B.Tech CSE (AI)</dt><dd>8.55</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- ═══ ACHIEVEMENTS ══════════════════════════════════════════════════ -->
-    <section id="achievements" aria-labelledby="achievements-heading">
-      <div class="achievements-inner">
-        <div class="section-header">
-          <span class="section-eyebrow">Recognition</span>
-          <h2 id="achievements-heading">Recognition &amp; Achievements</h2>
-        </div>
+    <!-- ═══ WORK ════════════════════════════════════════════════════ -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">01 — Selected work</p>
+          <h2 id="work-title">Things I've built</h2>
+        </header>
 
-        <div class="achievements-grid">
-
-          <article class="achievement-card" data-accent="var(--accent-amber)">
-            <div class="achievement-body">
-              <h3>1st Place — Pandora Hackathon 2026</h3>
-              <p class="achievement-org mono">GHRCEM &middot; Pune</p>
-              <p>Ranked 1st among 100+ teams in an AI innovation challenge. Built and pitched a complete AI automation solution under 24 hours.</p>
+        <!-- Featured -->
+        <article class="feature reveal" aria-labelledby="dv-title">
+          <div class="feature-copy">
+            <p class="kicker">Featured · AI business automation</p>
+            <h3 id="dv-title">DigiVyapar</h3>
+            <p class="feature-lede">
+              A back office for small businesses that runs entirely inside Telegram. Shop owners send a message or a photo,
+              and the system raises invoices, records expenses, updates the ledger and writes their marketing copy.
+            </p>
+            <ul class="checks">
+              <li>Purchase and sales invoicing from plain-language chat messages</li>
+              <li>OCR pipeline that turns bill photos into ledger entries</li>
+              <li>Three AI modules covering operations, marketing and sales</li>
+              <li>IIT Bombay Eureka semi-finalist · architecture published in IJRTE</li>
+            </ul>
+            <ul class="tags" aria-label="Tech stack">
+              <li>n8n</li><li>Telegram Bot API</li><li>OpenAI API</li><li>Google Vision</li><li>Python</li><li>Google Sheets</li>
+            </ul>
+            <div class="links">
+              <a href="https://drive.google.com/file/d/1z4AKgjGT1c7Qe82P-urbqPlafvsMM2DK/view" target="_blank" rel="noopener" class="btn btn-primary btn-small">Watch demo ↗</a>
+              <a href="https://github.com/husen110/Digivyapar.in" target="_blank" rel="noopener" class="btn btn-small">Source ↗</a>
             </div>
-          </article>
+          </div>
 
-          <article class="achievement-card" data-accent="var(--accent-1)">
-            <div class="achievement-body">
-              <h3>Semi-Finalist — IIT Bombay Eureka</h3>
-              <p class="achievement-org mono">IIT Bombay &middot; 2025</p>
-              <p>Selected as semi-finalist in India's largest student entrepreneurship competition for the DigiVyapar AI automation platform — recognized for technical innovation.</p>
-            </div>
-          </article>
-
-          <article class="achievement-card" data-accent="var(--accent-3)">
-            <div class="achievement-body">
-              <h3>Finalist — State Level E-Summit, COEP Pune</h3>
-              <p class="achievement-org mono">COEP &middot; Pune</p>
-              <p>Selected as finalist at the State Level E-Summit organized by COEP Pune, competing among top student entrepreneurs across Maharashtra.</p>
-            </div>
-          </article>
-
-          <article class="achievement-card" data-accent="var(--accent-2)">
-            <div class="achievement-body">
-              <h3>Regional Level Winner — Tech Business BIP Competition</h3>
-              <p class="achievement-org mono">Regional Level</p>
-              <p>Won the regional-level Tech Business BIP Competition, demonstrating strong technical and entrepreneurial problem-solving skills.</p>
-            </div>
-          </article>
-
-          <article class="achievement-card" data-accent="var(--accent-amber)">
-            <div class="achievement-body">
-              <h3>Technical Head — AI Student Association</h3>
-              <p class="achievement-org mono">G.H. Raisoni College &middot; 2024–Present</p>
-              <p>Lead technical events, workshops, and hackathon teams for the Artificial Intelligence Student Association Club.</p>
-            </div>
-          </article>
-
-          <article class="achievement-card" data-accent="var(--accent-1)">
-            <div class="achievement-body">
-              <h3>Selected — Economic Times Gen AI Hackathon</h3>
-              <p class="achievement-org mono">Economic Times &middot; March 2026</p>
-              <p>Selected to participate in the Economic Times Gen AI Hackathon, competing with top AI innovators across the country to build cutting-edge generative AI solutions.</p>
-            </div>
-          </article>
-
-          <article class="achievement-card" data-accent="var(--accent-3)">
-            <div class="achievement-body">
-              <h3>Selected — Cognizant Technoverse Hackathon</h3>
-              <p class="achievement-org mono">Cognizant &middot; March 2026</p>
-              <p>Selected for the Cognizant Technoverse Hackathon, an industry-level competition challenging participants to solve real-world technology problems with innovative solutions.</p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ PROJECTS ══════════════════════════════════════════════════════ -->
-    <section id="projects" aria-labelledby="projects-heading">
-      <div class="projects-header">
-        <span class="section-eyebrow">Work</span>
-        <h2 id="projects-heading">Featured Projects</h2>
-      </div>
-      <div class="projects-scroll-wrap">
-        <div class="projects-track" id="projectsTrack" role="list">
-
-          <!-- Project 1: DigiVyapar -->
-          <article class="project-card" role="listitem" aria-label="DigiVyapar AI Business Automation project" data-glow="purple">
-            <div class="project-thumb" style="background: linear-gradient(135deg, #1a0a2e, #7c6dfa, #fa6d9a);">
-              <span class="project-monogram">DV</span>
-            </div>
-            <div class="project-content">
-              <span class="project-tag">AI Automation · Hackathon Winner</span>
-              <h3>DigiVyapar</h3>
-              <p>AI-powered business automation platform for SMEs operated entirely via Telegram. Automates purchase/sales invoicing, expense tracking, ledger management with OCR, and AI-driven marketing content generation — all through a conversational chat interface.</p>
-              <div class="tech-pills">
-                <span class="tech-pill">Telegram Bot API</span>
-                <span class="tech-pill">n8n</span>
-                <span class="tech-pill">Python</span>
-                <span class="tech-pill">JavaScript</span>
-                <span class="tech-pill">Google Vision API</span>
-                <span class="tech-pill">OpenAI API</span>
-                <span class="tech-pill">Google Sheets</span>
+          <div class="feature-visual" aria-hidden="true">
+            <div class="chat">
+              <div class="chat-head">
+                <span class="chat-avatar">DV</span>
+                <div><strong>DigiVyapar</strong><small>bot</small></div>
               </div>
-              <div class="project-actions">
-                <a href="https://github.com/husen110/Digivyapar.in" target="_blank" rel="noopener" class="project-action" aria-label="View code">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                  Code
-                </a>
-                <a href="https://drive.google.com/file/d/1z4AKgjGT1c7Qe82P-urbqPlafvsMM2DK/view" target="_blank" rel="noopener" class="project-action project-action-video" aria-label="Watch demo video">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-                  Demo
-                </a>
+              <div class="chat-body">
+                <p class="msg msg-out">Sold 20 units to Sharma Traders at ₹450 each</p>
+                <p class="msg msg-in">
+                  <span class="msg-label">Invoice created</span>
+                  Sharma Traders · 20 × ₹450<br />
+                  <strong>Total ₹9,000</strong> · added to sales ledger
+                </p>
+                <p class="msg msg-out msg-photo"><span>📷 bill_photo.jpg</span></p>
+                <p class="msg msg-in">
+                  <span class="msg-label">Expense recorded</span>
+                  Read with OCR · category: Inventory
+                </p>
+                <p class="msg msg-out">Write a Diwali offer post</p>
+                <p class="msg msg-in msg-typing"><i></i><i></i><i></i></p>
               </div>
+              <p class="chat-note">Illustration of the chat flow</p>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <!-- Project 2: Student Study Assistant -->
-          <article class="project-card" role="listitem" aria-label="Student Study Assistant RAG-Powered project" data-glow="blue">
-            <div class="project-thumb" style="background: linear-gradient(135deg, #0a1a2e, #1a6bb5, #6dcffa);">
-              <span class="project-monogram">SA</span>
-            </div>
-            <div class="project-content">
-              <span class="project-tag">AI · RAG · Education</span>
+        <!-- Project list -->
+        <ol class="projects">
+          <li class="project reveal">
+            <span class="project-num">02</span>
+            <div class="project-main">
               <h3>Student Study Assistant</h3>
-              <p>RAG-powered study assistant that lets students upload PDFs and ask questions answered directly from their material. DeepSeek AI combines document content with web search for accurate answers and auto-generates multiple choice quizzes from uploaded content.</p>
-              <div class="tech-pills">
-                <span class="tech-pill">Python</span>
-                <span class="tech-pill">DeepSeek AI</span>
-                <span class="tech-pill">RAG</span>
-                <span class="tech-pill">LlamaParse</span>
-                <span class="tech-pill">REST APIs</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/husen110" target="_blank" rel="noopener" class="project-action" aria-label="View code">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                  Code
-                </a>
-                <a href="https://github.com/husen110" target="_blank" rel="noopener" class="project-action project-action-demo" aria-label="View project">View Project →</a>
-              </div>
+              <p>RAG assistant where students upload their PDFs and ask questions. Answers come from their own material, with web search to fill gaps, and it generates multiple-choice quizzes from the content.</p>
+              <ul class="tags"><li>Python</li><li>DeepSeek</li><li>RAG</li><li>LlamaParse</li></ul>
             </div>
-          </article>
-
-          <!-- Project 3: Smart Waste Classifier -->
-          <article class="project-card" role="listitem" aria-label="Smart Waste Classifier CNN project" data-glow="teal">
-            <div class="project-thumb" style="background: linear-gradient(135deg, #0a1e10, #1a8c4e, #6dfac8);">
-              <span class="project-monogram">WC</span>
+            <div class="project-links">
+              <a href="https://github.com/husen110" target="_blank" rel="noopener">GitHub ↗</a>
             </div>
-            <div class="project-content">
-              <span class="project-tag">Computer Vision · Deep Learning</span>
+          </li>
+          <li class="project reveal">
+            <span class="project-num">03</span>
+            <div class="project-main">
+              <h3>Face Recognition Attendance</h3>
+              <p>Takes attendance from a webcam using LBPH face recognition and writes the records to a database, so there's no manual roll call.</p>
+              <ul class="tags"><li>Python</li><li>OpenCV</li><li>SQLite</li><li>Tkinter</li></ul>
+            </div>
+            <div class="project-links">
+              <a href="https://drive.google.com/file/d/10327rkVLAaXykFPU86zcvSQoIsCpwwqw/view" target="_blank" rel="noopener">Demo ↗</a>
+              <a href="https://github.com/husen110/face-Recognition-Attendance-Management-system" target="_blank" rel="noopener">Source ↗</a>
+            </div>
+          </li>
+          <li class="project reveal">
+            <span class="project-num">04</span>
+            <div class="project-main">
               <h3>Smart Waste Classifier</h3>
-              <p>CNN-based image classification system that distinguishes organic from recyclable waste. Trained on labeled datasets with preprocessing, normalization, and data augmentation. Supports real-time prediction via webcam for automated waste segregation.</p>
-              <div class="tech-pills">
-                <span class="tech-pill">Python</span>
-                <span class="tech-pill">TensorFlow</span>
-                <span class="tech-pill">Keras</span>
-                <span class="tech-pill">OpenCV</span>
-                <span class="tech-pill">NumPy</span>
-                <span class="tech-pill">Matplotlib</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/husen110/-Waste-Classification-with-CNN" target="_blank" rel="noopener" class="project-action" aria-label="View code">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                  Code
-                </a>
-                <a href="https://drive.google.com/file/d/1npASdZHDLd4-ZcfgHBInZWT14DC3s8B2/view" target="_blank" rel="noopener" class="project-action project-action-video" aria-label="Watch demo video">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-                  Demo
-                </a>
-              </div>
+              <p>CNN that sorts organic from recyclable waste in real time from a webcam feed. Trained with augmentation and normalisation on labelled image data.</p>
+              <ul class="tags"><li>TensorFlow</li><li>Keras</li><li>OpenCV</li><li>NumPy</li></ul>
             </div>
-          </article>
-
-          <!-- Project 4: Face Recognition Attendance System -->
-          <article class="project-card" role="listitem" aria-label="Face Recognition Attendance Management System project" data-glow="rose">
-            <div class="project-thumb" style="background: linear-gradient(135deg, #1a0a10, #993556, #F0997B);">
-              <span class="project-monogram">FR</span>
+            <div class="project-links">
+              <a href="https://drive.google.com/file/d/1npASdZHDLd4-ZcfgHBInZWT14DC3s8B2/view" target="_blank" rel="noopener">Demo ↗</a>
+              <a href="https://github.com/husen110/-Waste-Classification-with-CNN" target="_blank" rel="noopener">Source ↗</a>
             </div>
-            <div class="project-content">
-              <span class="project-tag">Computer Vision · AI · Automation</span>
-              <h3>Face Recognition Attendance System</h3>
-              <p>Automated student attendance system using LBPH face recognition. Detects and identifies students in real time via webcam, marks attendance automatically, and stores records in a structured database — eliminating manual roll calls entirely.</p>
-              <div class="tech-pills">
-                <span class="tech-pill">Python</span>
-                <span class="tech-pill">OpenCV (LBPH)</span>
-                <span class="tech-pill">NumPy</span>
-                <span class="tech-pill">Tkinter</span>
-                <span class="tech-pill">SQLite</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/husen110/face-Recognition-Attendance-Management-system" target="_blank" rel="noopener" class="project-action" aria-label="View code">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                  Code
-                </a>
-                <a href="https://drive.google.com/file/d/10327rkVLAaXykFPU86zcvSQoIsCpwwqw/view" target="_blank" rel="noopener" class="project-action project-action-video" aria-label="Watch demo video">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-                  Demo
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 5: COVID-19 Data Analysis -->
-          <article class="project-card" role="listitem" aria-label="COVID-19 Data Analysis project" data-glow="amber">
-            <div class="project-thumb" style="background: linear-gradient(135deg, #0a0f1e, #1a3a6b, #4a90d9);">
-              <span class="project-monogram">CV</span>
-            </div>
-            <div class="project-content">
-              <span class="project-tag">Data Analysis · Visualization · Public Health</span>
+          </li>
+          <li class="project reveal">
+            <span class="project-num">05</span>
+            <div class="project-main">
               <h3>COVID-19 Data Analysis</h3>
-              <p>Exploratory data analysis of global COVID-19 trends using real-world datasets. Analyzes infection rates, recovery patterns, and mortality across countries with time-series visualizations and statistical summaries to surface meaningful public health insights.</p>
-              <div class="tech-pills">
-                <span class="tech-pill">Python</span>
-                <span class="tech-pill">Pandas</span>
-                <span class="tech-pill">NumPy</span>
-                <span class="tech-pill">Matplotlib</span>
-                <span class="tech-pill">Seaborn</span>
-                <span class="tech-pill">Jupyter Notebook</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://drive.google.com/file/d/1900w_u2nKaJTwKtSlZFGhVsL2U36BuLA/view" target="_blank" rel="noopener" class="project-action project-action-video" aria-label="Watch demo video">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-                  Watch Demo
-                </a>
-              </div>
+              <p>Exploratory analysis of global infection, recovery and mortality trends, with time-series visualisations and statistical summaries by country.</p>
+              <ul class="tags"><li>Pandas</li><li>Seaborn</li><li>Matplotlib</li><li>Jupyter</li></ul>
             </div>
-          </article>
-
-        </div>
+            <div class="project-links">
+              <a href="https://drive.google.com/file/d/1900w_u2nKaJTwKtSlZFGhVsL2U36BuLA/view" target="_blank" rel="noopener">Demo ↗</a>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ═══ SKILLS ════════════════════════════════════════════════════════ -->
-    <section id="skills" aria-labelledby="skills-heading">
-      <div class="skills-inner">
-        <div class="section-header">
-          <span class="section-eyebrow">Expertise</span>
-          <h2 id="skills-heading">Skills &amp; Technologies</h2>
-        </div>
+    <!-- ═══ EXPERIENCE ══════════════════════════════════════════════ -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">02 — Experience</p>
+          <h2 id="exp-title">Where I've worked</h2>
+        </header>
 
-        <div class="skills-grid">
-
-          <div class="skill-category reveal">
-            <p class="skill-category-label">Languages</p>
-            <div class="skill-pills-wrap">
-              <span class="skill-pill">Python</span>
-              <span class="skill-pill">JavaScript</span>
-              <span class="skill-pill">SQL</span>
+        <ol class="rows">
+          <li class="row reveal">
+            <p class="row-date">May 2026 — Now</p>
+            <div class="row-body">
+              <h3>AI Engineer Intern <span class="pill-now">Current</span></h3>
+              <p class="row-org">Rubikon Labs Pvt. Ltd.</p>
+              <p>Building and shipping production AI systems: LLM-backed workflows, model integration and automation tooling.</p>
             </div>
-          </div>
-
-          <div class="skill-category reveal">
-            <p class="skill-category-label">AI / ML</p>
-            <div class="skill-pills-wrap">
-              <span class="skill-pill">TensorFlow</span>
-              <span class="skill-pill">CNN</span>
-              <span class="skill-pill">OpenCV</span>
-              <span class="skill-pill">Pandas</span>
-              <span class="skill-pill">NumPy</span>
-            </div>
-          </div>
-
-          <div class="skill-category reveal">
-            <p class="skill-category-label">Automation</p>
-            <div class="skill-pills-wrap">
-              <span class="skill-pill">n8n</span>
-              <span class="skill-pill">Workflow Automation</span>
-              <span class="skill-pill">OCR</span>
-            </div>
-          </div>
-
-          <div class="skill-category reveal">
-            <p class="skill-category-label">Web &amp; Tools</p>
-            <div class="skill-pills-wrap">
-              <span class="skill-pill">React</span>
-              <span class="skill-pill">REST APIs</span>
-              <span class="skill-pill">Git</span>
-              <span class="skill-pill">Google Sheets</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ EXPERIENCE TIMELINE ══════════════════════════════════════════ -->
-    <section id="experience" aria-labelledby="experience-heading">
-      <div class="timeline-inner">
-        <div class="section-header">
-          <span class="section-eyebrow">Journey</span>
-          <h2 id="experience-heading">Experience &amp; Education</h2>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-line" aria-hidden="true"></div>
-
-          <!-- Entry 1 — current role -->
-          <div class="timeline-entry entry-left">
-            <div class="timeline-dot" style="--dot-color: var(--accent-2);" aria-hidden="true"></div>
-            <article class="timeline-card timeline-card-current">
-              <span class="timeline-year mono" style="color: var(--accent-2);">May 2026 – Present</span>
-              <h3>AI Engineer Intern <span class="timeline-now">Now</span></h3>
-              <p class="timeline-org">Rubikon Labs Pvt. Ltd.</p>
-              <p>Building and shipping production AI systems — LLM-backed workflows, model integration, and automation tooling. Started 21 May 2026.</p>
-            </article>
-          </div>
-
-          <!-- Entry 2 -->
-          <div class="timeline-entry entry-right">
-            <div class="timeline-dot" style="--dot-color: var(--accent-1);" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-year mono" style="color: var(--accent-1);">2024 – Present</span>
-              <h3>Technical Head</h3>
-              <p class="timeline-org">G.H. Raisoni College of Engineering &amp; Management</p>
-              <p>Leading technical events, coding workshops, and hackathon teams. Driving technical culture and student development across the engineering department.</p>
-            </article>
-          </div>
-
-          <!-- Entry 3 -->
-          <div class="timeline-entry entry-left">
-            <div class="timeline-dot" style="--dot-color: var(--accent-2);" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-year mono" style="color: var(--accent-2);">2024 – Present</span>
+          </li>
+          <li class="row reveal">
+            <p class="row-date">2024 — Now</p>
+            <div class="row-body">
               <h3>Lead Developer</h3>
-              <p class="timeline-org">Digivyapar Technologies</p>
-              <p>Architected and built an AI-powered business automation platform for SMEs. Designed three core modules handling operations, marketing, and sales automation using n8n, GPT-4, and ElevenLabs.</p>
-            </article>
-          </div>
-
-          <!-- Entry 4 -->
-          <div class="timeline-entry entry-right">
-            <div class="timeline-dot" style="--dot-color: var(--accent-3);" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-year mono" style="color: var(--accent-3);">2024</span>
-              <h3>Independent Researcher</h3>
-              <p class="timeline-org">Published — IJRTE</p>
-              <p>Authored research paper on DigiVyapar's technical architecture. Documented AI automation design patterns for SME deployment at scale.</p>
-            </article>
-          </div>
-
-          <!-- Entry 5 -->
-          <div class="timeline-entry entry-left">
-            <div class="timeline-dot" style="--dot-color: var(--accent-3);" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-year mono" style="color: var(--accent-3);">2024</span>
-              <h3>AI Intern — Model Validation &amp; QA</h3>
-              <p class="timeline-org">Internship</p>
-              <p>Built and evaluated an AI AutoGrader using OCR for handwritten scripts. Analyzed model performance using RMSE, MAE, and R². Achieved 100% QA mapping accuracy, improving grading efficiency by ~70%.</p>
-            </article>
-          </div>
-
-          <!-- Entry 6 -->
-          <div class="timeline-entry entry-right">
-            <div class="timeline-dot" style="--dot-color: var(--accent-amber);" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-year mono" style="color: var(--accent-amber);">2023 – Present</span>
-              <h3>B.Tech CSE (AI)</h3>
-              <p class="timeline-org">GHRCEM Pune &middot; Minor in Data Science</p>
-              <p>Final year student of Computer Science Engineering with AI specialization and Minor in Data Science. CGPA: 8.55. Actively building real-world AI projects while in college.</p>
-            </article>
-          </div>
-
-        </div>
+              <p class="row-org">DigiVyapar Technologies</p>
+              <p>Architected the AI automation platform for SMEs end to end. Built three modules for operations, marketing and sales on n8n, GPT-4 and ElevenLabs voice agents.</p>
+            </div>
+          </li>
+          <li class="row reveal">
+            <p class="row-date">2024 — Now</p>
+            <div class="row-body">
+              <h3>Technical Head</h3>
+              <p class="row-org">AI Student Association, G.H. Raisoni College</p>
+              <p>Run technical events and coding workshops, and lead the college's hackathon teams.</p>
+            </div>
+          </li>
+          <li class="row reveal">
+            <p class="row-date">2024</p>
+            <div class="row-body">
+              <h3>AI Intern, Model Validation &amp; QA</h3>
+              <p class="row-org">Internship</p>
+              <p>Built and evaluated an OCR-based AutoGrader for handwritten answer scripts. Measured it with RMSE, MAE and R², reached 100% question-answer mapping accuracy and cut grading time by about 70%.</p>
+            </div>
+          </li>
+          <li class="row reveal">
+            <p class="row-date">2024</p>
+            <div class="row-body">
+              <h3>Author, research paper</h3>
+              <p class="row-org">Published in IJRTE</p>
+              <p>Wrote up DigiVyapar's architecture and the design patterns for deploying AI automation to small businesses.</p>
+            </div>
+          </li>
+          <li class="row reveal">
+            <p class="row-date">2023 — 2027</p>
+            <div class="row-body">
+              <h3>B.Tech, Computer Science (AI)</h3>
+              <p class="row-org">GHRCEM Pune · Minor in Data Science</p>
+              <p>Final year. CGPA 8.55.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ═══ CONTACT ════════════════════════════════════════════════════════ -->
-    <section id="contact" aria-labelledby="contact-heading">
-      <div class="contact-inner">
-        <span class="section-eyebrow reveal">Get In Touch</span>
-        <h2 id="contact-heading" class="reveal">
-          Let's Build <span class="gradient-text-hero">Something</span>
-        </h2>
-        <p class="contact-sub reveal">
-          Open to AI/automation projects, freelance work, and collaborations. Based in Pune — available remotely worldwide.
-        </p>
+    <!-- ═══ RECOGNITION ════════════════════════════════════════════ -->
+    <section class="section" id="recognition" aria-labelledby="rec-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">03 — Recognition</p>
+          <h2 id="rec-title">Competitions &amp; awards</h2>
+        </header>
 
-        <!-- Contact links -->
-        <div class="contact-links reveal">
-          <a href="tel:+919173735384" class="contact-link btn-magnetic" aria-label="Call Hussein">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.72 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.63 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.51 5.51l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +91 91737 35384
-          </a>
-          <a href="mailto:hussein.saif110@gmail.com" class="contact-link btn-magnetic" aria-label="Email Hussein — click to copy address">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            <span class="contact-link-text">hussein.saif110@gmail.com</span>
-          </a>
-          <a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" target="_blank" rel="noopener noreferrer" class="contact-link btn-magnetic" aria-label="LinkedIn profile">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            linkedin.com/in/hussein-saifee-lyh110
-          </a>
-          <a href="https://github.com/husen110" target="_blank" rel="noopener noreferrer" class="contact-link btn-magnetic" aria-label="GitHub profile">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            github.com/husen110
-          </a>
-        </div>
-
-        <!-- Contact form -->
-        <form class="contact-form reveal" id="contactForm" novalidate aria-label="Contact form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-magnetic contact-submit">Send Message &rarr;</button>
-        </form>
+        <ul class="awards">
+          <li class="award reveal award-top">
+            <span class="award-rank">1st</span>
+            <div><h3>Pandora Hackathon 2026</h3><p>Ranked first of 100+ teams. Built and pitched a full AI automation product in 24 hours.</p></div>
+            <span class="award-org">GHRCEM, Pune</span>
+          </li>
+          <li class="award reveal">
+            <span class="award-rank">Semi-final</span>
+            <div><h3>IIT Bombay Eureka</h3><p>India's largest student entrepreneurship competition, with DigiVyapar.</p></div>
+            <span class="award-org">IIT Bombay · 2025</span>
+          </li>
+          <li class="award reveal">
+            <span class="award-rank">Winner</span>
+            <div><h3>Tech Business BIP Competition</h3><p>Regional-level winner.</p></div>
+            <span class="award-org">Regional</span>
+          </li>
+          <li class="award reveal">
+            <span class="award-rank">Finalist</span>
+            <div><h3>State Level E-Summit</h3><p>Among the top student founders in Maharashtra.</p></div>
+            <span class="award-org">COEP, Pune</span>
+          </li>
+          <li class="award reveal">
+            <span class="award-rank">Selected</span>
+            <div><h3>Economic Times Gen AI Hackathon</h3><p>National generative AI hackathon.</p></div>
+            <span class="award-org">Economic Times · 2026</span>
+          </li>
+          <li class="award reveal">
+            <span class="award-rank">Selected</span>
+            <div><h3>Cognizant Technoverse Hackathon</h3><p>Industry-level hackathon on real-world problems.</p></div>
+            <span class="award-org">Cognizant · 2026</span>
+          </li>
+        </ul>
       </div>
     </section>
 
+    <!-- ═══ ABOUT ═══════════════════════════════════════════════════ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <header class="section-head reveal">
+          <p class="eyebrow">04 — About</p>
+          <h2 id="about-title">Less talk about AI. <em>More</em> of it in production.</h2>
+        </header>
+        <div class="about-copy reveal">
+          <p>
+            I started building for real users while still in college. At DigiVyapar I learned that the hard part
+            is rarely the model. It's the messy inputs, the edge cases and getting a shop owner to trust a bot with their ledger.
+          </p>
+          <p>
+            I like problems where an automation measurably saves time or money. I'm comfortable across the stack, from
+            prompt and retrieval design to n8n orchestration, APIs and the interface people actually touch.
+          </p>
+        </div>
+
+        <div class="skills reveal" aria-label="Skills">
+          <div><h3>LLMs &amp; agents</h3><p>OpenAI API · DeepSeek · RAG · LlamaParse · ElevenLabs voice agents</p></div>
+          <div><h3>Automation</h3><p>n8n · Workflow design · OCR · Telegram bots · Google Workspace APIs</p></div>
+          <div><h3>Machine learning</h3><p>TensorFlow · Keras · CNNs · OpenCV · Pandas · NumPy</p></div>
+          <div><h3>Engineering</h3><p>Python · JavaScript · SQL · React · React Native · Supabase · REST · Git</p></div>
+        </div>
+      </div>
+
+      <div class="gallery reveal" aria-label="Photos from events">
+        <figure><img src="images/iit-bombay-esummit.jpg" width="900" height="1150" loading="lazy" alt="Hussein with teammates at the IIT Bombay E-Summit" /><figcaption>IIT Bombay E-Summit</figcaption></figure>
+        <figure><img src="images/aisa-session.jpg" width="960" height="1280" loading="lazy" alt="Hussein presenting at a lectern during an AI Student Association session" /><figcaption>Leading an AISA session</figcaption></figure>
+        <figure><img src="images/aisa-talk.jpg" width="720" height="1280" loading="lazy" alt="Hussein speaking at a college event" /><figcaption>Speaking at Raisoni</figcaption></figure>
+        <figure><img src="images/team.jpg" width="963" height="1280" loading="lazy" alt="Hussein with two teammates outside a stone building" /><figcaption>With the team</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ════════════════════════════════════════════════ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="eyebrow reveal">05 — Contact</p>
+        <h2 id="contact-title" class="contact-title reveal">Got work that should <em>run itself?</em><br />Let's talk.</h2>
+
+        <div class="contact-email reveal">
+          <a href="mailto:hussein.saif110@gmail.com">hussein.saif110@gmail.com</a>
+          <button class="copy" id="copyEmail" data-email="hussein.saif110@gmail.com" type="button">Copy</button>
+        </div>
+
+        <ul class="contact-links reveal">
+          <li><a href="https://www.linkedin.com/in/hussein-saifee-lyh110/" target="_blank" rel="noopener"><span>LinkedIn</span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://github.com/husen110" target="_blank" rel="noopener"><span>GitHub</span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="tel:+919173735384"><span>+91 91737 35384</span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="Hussein_Resume_Final.pdf" target="_blank" rel="noopener"><span>Résumé (PDF)</span><span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
-  <footer role="contentinfo">
-    <a href="#hero" class="footer-logo gradient-text" aria-label="Back to top">Hussein.</a>
-    <nav aria-label="Footer navigation">
-      <ul class="footer-nav" role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <p class="footer-copy">Built with passion in Pune &copy; 2025</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Hussein Saifee Petladwala</p>
+      <p>Pune · <span id="localTime">IST</span></p>
+      <a href="#top">Back to top ↑</a>
+    </div>
   </footer>
 
-  <!-- ═══ CDN SCRIPTS ══════════════════════════════════════════════════ -->
-  <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-
-  <!-- ═══ LOCAL SCRIPTS ════════════════════════════════════════════════ -->
-  <script src="js/loader.js"></script>
-  <script src="js/cursor.js"></script>
-  <script src="js/lenis.js"></script>
-  <script src="js/marquee.js"></script>
-  <script src="js/magnetic.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/motion-animations.js"></script>
-  <script src="js/polish.js"></script>
-  <script src="js/slideshow.js?v=5"></script>
-  <script src="js/interactions.js?v=3"></script>
-
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js?v=20" defer></script>
 </body>
 </html>
